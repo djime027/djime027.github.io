@@ -1,4 +1,129 @@
 html {
   height: 100%;
   width: 100%;
+}body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-wrapper {
+  width: 80%;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.audio-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#audioPlayer {
+  width: 100%;
+  max-width: 100%;
+}
+
+.control-buttons {
+  margin-left: 10px;
+}
+
+.control-buttons button {
+  font-size: 16px;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #4fc3f7;
+  color: white;
+}
+
+.control-buttons button:hover {
+  background-color: #03a9f4;
+}
+
+.label {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.label span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+.label .yellow-square {
+  background-color: #ffd54f;
+}
+
+.label .blue-square {
+  background-color: #4fc3f7;
+}
+
+.toggle-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.transcript {
+  display: none; /* Hide both transcripts by default */
+  max-height: 20rem; /* Adjust height to show approximately 15 lines of text */
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.transcript.active {
+  display: block; /* Only the active transcript is visible */
+}
+
+.transcript p {
+  margin: 10px 0;
+  line-height: 1.5;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+.highlight {
+  border-radius: 4px;
+}
+
+.david.highlight {
+  background-color: #fff59d;
+}
+
+.maria.highlight {
+  background-color: #b3e5fc;
+}
+
+.summary-container {
+  width: 100%; /* Make the container take full width */
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.summary-image {
+  max-width: 100%; /* Ensure the image is fully visible */
 }
