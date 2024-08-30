@@ -20,7 +20,9 @@ audioPlayer.addEventListener('timeupdate', () => {
 
     if (currentTime >= startTime && currentTime < endTime) {
       p.classList.add('highlight');
-      p.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Scroll only the transcript container to the highlighted paragraph
+      const transcriptContainer = activeTranscript.parentElement;
+      transcriptContainer.scrollTop = p.offsetTop - transcriptContainer.offsetTop;
     } else {
       p.classList.remove('highlight');
     }
